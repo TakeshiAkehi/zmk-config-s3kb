@@ -1,0 +1,15 @@
+# Copyright (c) 2021 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+if SHIELD_S3KB_FRONT
+    config ZMK_KEYBOARD_NAME
+        default "s3kbd"
+    config ZMK_SPLIT_ROLE_CENTRAL
+        default y
+endif
+
+
+if SHIELD_S3KB_BACK || SHIELD_S3KB_FRONT
+    config ZMK_SPLIT
+        default y
+endif

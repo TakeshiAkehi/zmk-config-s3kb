@@ -1,0 +1,8 @@
+file_format: "1"
+id: s3kb
+name: S3KB
+type: shield
+url: https://none
+requires: [seeed_xiao]
+features:
+  - keys
