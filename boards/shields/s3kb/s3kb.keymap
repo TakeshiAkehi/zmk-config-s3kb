@@ -196,14 +196,6 @@
             key-positions = <9 21>;
             bindings = <&kp SEMI>;
         };
-        combo_right_56B {
-            key-positions = <35 36>;
-            bindings = <&mkp LCLK>;
-        };
-        combo_right_6MB {
-            key-positions = <23 36>;
-            bindings = <&mkp MB4>;
-        };
         combo_right_456B {
             key-positions = <34 35 36>;
             bindings = <&mo LMSC>;
@@ -220,14 +212,6 @@
             key-positions = <37 38>;
             bindings = <&mo LFUN>;
         };
-        combo_left_54B {
-            key-positions = <25 26>;
-            bindings = <&kp LGUI>;
-        };
-        combo_right6TM {
-            key-positions = <11 23>;
-            bindings = <&kp LGUI>;
-        };
     };
 
 };
@@ -243,10 +227,10 @@
 
 &keymap_layer_default {
     bindings = <
-    &kp LALT  &kp Q &kp W &kp U &kp F &kp ESC                  &kp K    &kp L &kp R &kp Y &kp P &kp DEL
-    &kp LCTRL &kp E &kp I &kp A &kp O &kp MINUS                &kp BSPC &kp T &kp N &kp S &kp H &kp RET
-    &kp LSHFT &kp Z &kp X &kp C &kp V &kp PRCNT      &mo LADJ  &kp G    &kp D &kp M &kp J &kp B &mlt LMSK LCLK
-                            &lt LSYM TAB &mt LCTRL SPACE           &lt LNAV SPACE &cwh CAPS_WORD_HOLD(LSHFT)               &none
+    &kp DEL   &kp ESC &kp W &kp U &kp F &none                    &none    &kp L &kp R &kp Y &kp LCLK &kp RCLK
+    &kp LALT  &kp E   &kp I &kp A &kp O &kp MINUS                &kp K &kp T &kp N &kp S &kp H &kp P
+    &kp LSHFT &kp Z   &kp X &kp C &kp V &kp Q        &mo LADJ    &kp G &kp D &kp M &kp J &kp B &mlt LMSK LCLK
+                            &lt LSYM TAB &mt LCTRL RET         &lt LNAV SPACE &kp BSPC               &none
     &mo LSYM  &kp UP    &mo LMSK   &none
     &kp LEFT  &kp DOWN  &kp RIGHT  &motog MO_TOG(LMSK)
     >;
@@ -282,8 +266,8 @@
 
 &keymap_layer_nav {
     bindings = <
-    &kp LALT  &none        &kp N4 &kp N5 &kp N6  &kp ESC         &none         &kp PG_DN     &kp UP        &kp PG_UP    &kp LGUI &kp DEL 
-    &kp LCTRL &mt LCTRL N0 &kp N1 &kp N2 &kp N3  &none           &kp BSPC      &kp LEFT      &kp DOWN      &kp RIGHT    &kp LALT &kp RET
+    &kp LALT  &none        &kp N4 &kp N5 &kp N6  &kp ESC         &none         &kp PG_DN     &kp PG_UP        &kp PG_UP    &kp LGUI &kp DEL 
+    &kp LCTRL &mt LCTRL N0 &kp N1 &kp N2 &kp N3  &none           &kp LEFT &kp DOWN      &kp UP        &kp RIGHT &kp LALT &kp LGUI
     &kp LSHFT &mt LSHFT N0 &kp N7 &kp N8 &kp N9  &none    &none  &kp LS(LA(B)) &kp LC(PG_UP) &kp LC(PG_DN) &kp HOME     &kp END  &kp RSHFT
                                 &lt LSYM TAB   &kp LCTRL         &trans     &kp LGUI                    &none
     &trans &trans &trans &trans
