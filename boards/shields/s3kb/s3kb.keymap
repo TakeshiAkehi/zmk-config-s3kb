@@ -227,7 +227,7 @@
 
 &keymap_layer_default {
     bindings = <
-    &kp DEL   &kp ESC &kp W &kp U &kp F &none                    &none    &kp L &kp R &kp Y &kp LCLK &kp RCLK
+    &kp DEL   &kp ESC &kp W &kp U &kp F &none                    &none    &kp L &kp R &kp Y &mkp LCLK &mkp RCLK
     &kp LALT  &kp E   &kp I &kp A &kp O &kp MINUS                &kp K &kp T &kp N &kp S &kp H &kp P
     &kp LSHFT &kp Z   &kp X &kp C &kp V &kp Q        &mo LADJ    &kp G &kp D &kp M &kp J &kp B &mlt LMSK LCLK
                             &lt LSYM TAB &mt LCTRL RET         &lt LNAV SPACE &kp BSPC               &none
