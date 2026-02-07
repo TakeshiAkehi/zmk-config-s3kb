@@ -1,5 +1,7 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
+#include <input/processors.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
 #include "s3kb.dtsi"
 
 &uicr {
@@ -83,5 +85,18 @@
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
+    };
+};
+
+/ {
+    trackball_listener: trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+
+        /* Scroll mode on LMSC(3) and LSYM(6) layers */
+        scroll_layer {
+            layers = <3 6>;
+            input-processors = <&zip_xy_to_scroll_mapper &zip_scroll_transform (INPUT_TRANSFORM_Y_INVERT) &zip_scroll_scaler 1 16>;
+        };
     };
 };

@@ -34,42 +34,6 @@
 
 
 /*
-        ////////////////////////////////////
-        // trackball listener & behaviors //
-        ////////////////////////////////////
-*/
-/{
-    trackball_listener_mmv {
-            compatible = "zmk,input-behavior-listener";
-            device = <&trackball>;
-            layers = <LDEF LMSK>;
-            evt-type = <INPUT_EV_REL>;
-            x-input-code = <INPUT_REL_X>;
-            y-input-code = <INPUT_REL_Y>;
-            scale-multiplier = <1>;
-            scale-divisor = <1>;
-            /* bind a behavior to auto activate MSK layer for &mkp */
-            //bindings = <&ib_tog_layer LMSK>;
-    };
-    trackball_listener_msc {
-            compatible = "zmk,input-behavior-listener";
-            device = <&trackball>;
-            layers = <LSYM LMSC>; 
-            evt-type = <INPUT_EV_REL>;
-            x-input-code = <INPUT_REL_MISC>;
-            y-input-code = <INPUT_REL_WHEEL>;
-            y-invert;
-            bindings = <&ib_wheel_scaler 1 16>;
-    };
-    ib_wheel_scaler: ib_wheel_scaler {
-            compatible = "zmk,input-behavior-scaler";
-            #binding-cells = <2>;
-            evt-type = <INPUT_EV_REL>;
-            input-code = <INPUT_REL_WHEEL>;
-    };
-};
-
-/*
         //////////////
         // encoders //
         //////////////

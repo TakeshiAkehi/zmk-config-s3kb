@@ -32,11 +32,6 @@
     };
 
 
-	trackball: virtual_input {
-		compatible = "zmk,virtual-input";
-	};
-
-
 };
 
 &right_encoder {
