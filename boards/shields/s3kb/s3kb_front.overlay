@@ -1,6 +1,10 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include "s3kb.dtsi"
 
+&uicr {
+    nfct-pins-as-gpios;
+};
+
 / {
     kscan0: kscan_0 {
         compatible = "zmk,kscan-gpio-matrix";
