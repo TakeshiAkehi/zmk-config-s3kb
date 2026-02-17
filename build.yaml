@@ -18,7 +18,7 @@
 #
 ---
 include:
-  - board: xiao_ble
+  - board: xiao_ble//zmk
     shield: s3kb_front
-  - board: xiao_ble
+  - board: xiao_ble//zmk
     shield: s3kb_back
